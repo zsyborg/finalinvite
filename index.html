@@ -4,12 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
+        <link rel="stylesheet" href="assets/md5/css/mdb.dark.min.css" />
+        <script src="assets/md5/js/mdb.es.min.js"></script>
+
+
+
     <title>Inviter</title>
     <style>
         body {
-            --bg-color: var(--tg-theme-bg-color);
+            /* --bg-color: var(--tg-theme-bg-color); */
             font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--tg-theme-text-color);
@@ -65,10 +70,21 @@
 </head>
 
 <body>
+
     <main>
-        <div align="center">
-            <a href="https://ton.org/"><img width="48" src="./assets/tapps.png" alt="logo of telegram web apps"></a>
+
+        <div class="container-fluid">
+            <div class="row d-flex flex-row justify-content-center">
+                <div class="col-4 d-flex">
+                </div>
+                <div class="col-4 text-center text-dark">
+                    <h2>Welcome To Inviter TG App!</h2>
+                </div>
+                <div class="col-4  d-flex">
+                    </div>
+            </div>
         </div>
+
         <h1>Modals</h1>
         <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
         <button onclick="showPopup();">Launch Popup</button>
@@ -163,3 +179,4 @@
     <script>eruda.init();</script>
 </body>
 </html>
+`
