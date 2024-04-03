@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
+        <link rel="stylesheet" href="assets/md5/css/mdb.dark.min.css" />
+        <link rel="stylesheet" href="assets/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/jquery-ui.min.css" />
+        <link rel="stylesheet" href="assets/angel.css" />
+        <script src="assets/md5/js/mdb.es.min.js"></script>
+
+
+
+    <title>Inviter</title>
+    <style>
+        body {
+            /* --bg-color: var(--tg-theme-bg-color); */
+            font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--tg-theme-text-color);
+            margin: 48px 24px;
+            padding: 0;
+            color-scheme: var(--tg-color-scheme);
+        }
+
+        a {
+            color: var(--tg-theme-link-color);
+        }
+        #viewport {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: var(--tg-viewport-stable-height, 100vh);
+            pointer-events: none;
+            transition: all .2s ease;
+        }
+        #viewport:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-width: 4px;
+            border-style: solid;
+            border-image: linear-gradient(45deg, rgba(64, 224, 208, .5), rgba(173, 255, 47, .5)) 1;
+        }
+
+        #viewport-params-size,
+        #viewport-params-expand {
+            content: attr(text);
+            position: absolute;
+            display: inline-block;
+            background: var(--tg-theme-link-color, rgb(64, 224, 208));
+            right: 4px;
+            left: auto;
+            font-size: 8px;
+            padding: 4px;
+            vertical-align: top;
+        }
+        #viewport-params-size {
+            top: 4px;
+        }
+        #viewport-params-expand {
+            top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+
+        <div class="backbtn">
+            <a href="index.html">
+                <i class="fa-backward fas fa-4x text-primary" style="position: fixed; top: 20px; left: 20px;"></i>
+            </a>
+        </div>
+
+        <div class="backbtn">
+            <a href="profile.html">
+                <i class="fa-user fas fa-4x text-primary" style="position: fixed; top: 20px; right: 20px;"></i>
+            </a>
+        </div>
+
+
+     
+        
+
+
+<div class="container">
+   
+    <div class="row">
+      <!-- Single Advisor-->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+          <!-- Team Thumb-->
+          <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+            <!-- Social Info-->
+            <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+          </div>
+          <!-- Team Details-->
+          <div class="single_advisor_details_info">
+            <h6>Samantha Sarah</h6>
+            <p class="designation">Founder &amp; CEO</p>
+          </div>
+        </div>
+      </div>
+     
+      
+    </div>
+  </div>
+
+        <!-- <h1>Modals</h1>
+        <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
+        <button onclick="showPopup();">Launch Popup</button>
+
+        <h1>Links</h1>
+        <ul>
+            <li>
+                <a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/trendingapps');">Open link within Telegram</a>
+            </li>
+            <li>
+                <a href="javascript:Telegram.WebApp.openLink('https://ton.org/');">Open link in external browser</a>
+            </li>
+            <li>
+                <a href="javascript:Telegram.WebApp.openLink('https://telegra.ph/api',{try_instant_view:true});">Open link inside Telegram webview</a>
+            </li>
+        </ul>
+
+        <h1>Buttons</h1>
+        <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
+        <button onclick="toggleMainButton();">Toggle Main Button</button> -->
+    </main>
+    <script src="assets/js/telegram-web-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitterlib.js/1.0.9/twitterlib.min.js" integrity="sha512-3BSEJOu4rPD0d8loDd0eHGfKBRDeLYQ2DuOmuMoFAQuhhya8WmnA9kGSZRnISV6HCgIM9EBzQF2HFAPheOzZew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <script>
+        // Init TWA
+        Telegram.WebApp.ready();
+
+        // Event occurs whenever theme settings are changed in the user's Telegram app (including switching to night mode).
+        Telegram.WebApp.onEvent('themeChanged', function() {
+            document.documentElement.className = Telegram.WebApp.colorScheme;
+        });
+        
+        console.log(Telegram.WebApp)
+
+        // Show main button
+        Telegram.WebApp.MainButton.setParams({
+            text: 'Main Button'
+        });
+        Telegram.WebApp.MainButton.onClick(function () {
+            Telegram.WebApp.showAlert('Main Button was clicked')
+        });	
+        Telegram.WebApp.MainButton.show();
+        
+
+        // Function to call showPopup API
+        function showPopup() {
+            Telegram.WebApp.showPopup({
+                title: 'Title',
+                message: 'Some message',
+                buttons: [
+                    {id: 'link', type: 'default', text: 'Open ton.org'},
+                    {type: 'cancel'},
+                ]
+            }, function(btn) {
+                if (btn === 'link') {
+                    Telegram.WebApp.openLink('https://ton.org/');
+                }
+            });
+        };
+        
+        // Function to toggle main TWA button
+        function toggleMainButton() {
+            if (Telegram.WebApp.MainButton.isVisible) {
+                Telegram.WebApp.MainButton.hide();
+            } else {
+                Telegram.WebApp.MainButton.show();
+            }
+        };
+        
+        // function setViewportData() {
+        //     var sizeEl = document.getElementById('viewport-params-size');
+        //     sizeEl.innerText = 'width: ' + window.innerWidth + ' x ' + 
+        //         'height: ' + Telegram.WebApp.viewportStableHeight;
+                
+        //     var expandEl = document.querySelector('#viewport-params-expand');
+        //     expandEl.innerText = 'Is Expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false');
+        // }
+        
+        Telegram.WebApp.setHeaderColor('secondary_bg_color');
+
+        setViewportData();
+        Telegram.WebApp.onEvent('viewportChanged', setViewportData);
+
+        Telegram.WebApp.onEvent('themeChanged', function() {
+            document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
+        });
+
+        </script>
+
+
+<script>
+
+    function tester() {
+    
+        
+    
+    }
+
+
+    
+    $("#form").click(function(event) {
+    // $("#bdy").removeClass();
+    // $("#bdy").addClass('whiteNoise');
+    // $("h1,h2,h4,p,body").css({
+    //     color: 'white'
+    //     // property2: 'value2'
+    // });
+        var tw = $("#twitter").text();
+        var tg = $("#telegram").text();
+        var sol = $("#solana").text();
+        console.log(tw + tg + sol)
+
+
+});
+
+
+
+    function firstsubmit() {
+        var frm = document.getElementById("form")
+        frm.onclick = function(){tester}
+    }
+</script>
+
+<!-- Eruda is console for mobile browsers -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/eruda.js"></script>
+    <script>eruda.init();</script>
+    <script src="assets/app.js"></script>
+</body>
+</html>
+`

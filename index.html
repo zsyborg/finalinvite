@@ -7,9 +7,16 @@
         <!-- <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
         <link rel="stylesheet" href="assets/md5/css/mdb.dark.min.css" />
+        <link rel="stylesheet" href="assets/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/jquery-ui.min.css" />
+        <link rel="stylesheet" href="assets/angel.css" />
         <script src="assets/md5/js/mdb.es.min.js"></script>
-
-
+        <script src="https://unpkg.com/lodash@4.17.20"></script>
+        <script src="./assets/js/anime/anime.min.js"></script>
+        <script src="./assets/js/gsap/gsap.min.js"></script>
+        <script src="./assets/js/gsap/CSSRulePlugin.min.js"></script>
+        <script src="./assets/js/gsap/EaselPlugin.min.js"></script>
+        <script src="./src/index.js"></script>
 
     <title>Inviter</title>
     <style>
@@ -69,23 +76,78 @@
     </style>
 </head>
 
-<body>
+<body onload="document.registration.userid.focus();">
 
-    <main>
+    <main style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
 
-        <div class="container-fluid">
-            <div class="row d-flex flex-row justify-content-center">
-                <div class="col-4 d-flex">
+        <div class="container p-4 rounded-5 bg-dark-subtle">
+            <div class="row m-0 p-0 d-flex flex-row justify-content-center">
+                
+                <div class="col-12 m-0 p-0 text-center text-white">
+                    <h3 class="text-primary">Welcome To Inviter TG App!</h3>
                 </div>
-                <div class="col-4 text-center">
-                    <h2>Welcome To Inviter TG App!</h2>
-                </div>
-                <div class="col-4  d-flex">
-                    </div>
+                
+                <h2 class="text-center" style="color: orange;">Setup Your Profile</h2>
             </div>
         </div>
 
-        <h1>Modals</h1>
+<br/>
+<br/>
+
+
+        <div class="container-fluid panel">
+            <div class="row d-flex flex-row justify-content-center">
+                <div class="col-1 d-flex">
+                </div>
+                <div class="col-10 text-center text-white">
+                    <div class="container-fluid">
+                        <form name="reg" onsubmit="return firstsubmit()">
+                            <div class="mb-3 row">
+                                
+                                <div
+                                    class="col-12"
+                                >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="twitter"
+                                        id="inputName"
+                                        placeholder="Twitter Handle Without @"
+                                    />
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="telegram"
+                                        id="inputName"
+                                        placeholder="Telgram Profile Without @"
+                                    />
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="solana"
+                                        id="inputName"
+                                        placeholder="Enter Solana Wallet"
+                                    />
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3 row">
+                                <div class="offset-sm-4 col-sm-8">
+                                    <a id="form" class="btn btn-primary">
+                                        Start
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+                <div class="col-1 d-flex">
+                </div>
+            </div>
+        </div>
+
+        <!-- <h1>Modals</h1>
         <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
         <button onclick="showPopup();">Launch Popup</button>
 
@@ -104,13 +166,48 @@
 
         <h1>Buttons</h1>
         <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
-        <button onclick="toggleMainButton();">Toggle Main Button</button>
+        <button onclick="toggleMainButton();">Toggle Main Button</button> -->
     </main>
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
     <div id="viewport-params-expand"></div>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js" async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitterlib.js/1.0.9/twitterlib.min.js" integrity="sha512-3BSEJOu4rPD0d8loDd0eHGfKBRDeLYQ2DuOmuMoFAQuhhya8WmnA9kGSZRnISV6HCgIM9EBzQF2HFAPheOzZew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+    function tester() {
+        
+        
+    }
+
+
+    
+    $("#form").click(function(event) {
+    // $("#bdy").removeClass();
+    // $("#bdy").addClass('whiteNoise');
+    // $("h1,h2,h4,p,body").css({
+    //     color: 'white'
+    //     // property2: 'value2'
+    // });
+        var tw = $("#twitter").text();
+        var tg = $("#telegram").text();
+        var sol = $("#solana").text();
+        console.log(tw + tg + sol)
+
+
+});
+
+
+
+    function firstsubmit() {
+        var frm = document.getElementById("form")
+        frm.onclick = function(){tester}
+    }
+</script>
+
+
+
     <script>
         // Init TWA
         Telegram.WebApp.ready();
@@ -128,6 +225,7 @@
             Telegram.WebApp.showAlert('Main Button was clicked')
         });	
         Telegram.WebApp.MainButton.show();
+        
 
         // Function to call showPopup API
         function showPopup() {
@@ -144,7 +242,7 @@
                 }
             });
         };
-
+        
         // Function to toggle main TWA button
         function toggleMainButton() {
             if (Telegram.WebApp.MainButton.isVisible) {
@@ -153,16 +251,16 @@
                 Telegram.WebApp.MainButton.show();
             }
         };
-
+        
         function setViewportData() {
             var sizeEl = document.getElementById('viewport-params-size');
             sizeEl.innerText = 'width: ' + window.innerWidth + ' x ' + 
                 'height: ' + Telegram.WebApp.viewportStableHeight;
-
+                
             var expandEl = document.querySelector('#viewport-params-expand');
             expandEl.innerText = 'Is Expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false');
         }
-
+        
         Telegram.WebApp.setHeaderColor('secondary_bg_color');
 
         setViewportData();
@@ -172,11 +270,15 @@
             document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
         });
 
-    </script>
+        </script>
 
-    <!-- Eruda is console for mobile browsers -->
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+<!-- Eruda is console for mobile browsers -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/eruda/3.0.1/eruda.min.js" integrity="sha512-KkkY/3auRhaXDFzFMpwtZ+BrS8EBQ+GfiBxdJ9jGMi6Gg74/sYbq/IZpY593pkNjTmbeRfBwjpZo+7gcpH45Ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script>eruda.init();</script>
+    <script src="assets/app.js"></script>
 </body>
 </html>
 `
