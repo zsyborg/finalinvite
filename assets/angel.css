@@ -2,11 +2,24 @@ input::placeholder{
     font-size: 12px;
 }
 
+
+.dosis-invite {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 body{
-    background-image: url('../assets/tgback.jpg');
+    /* background-image: url('../assets/tgback.jpg'); */
     background-size: cover;
     background-attachment: fixed;
-    color: antiquewhite;
+    /* color: antiquewhite; */
+  font-family: "Dosis", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  background-color: rgb(142, 230, 215);
   }
 
 
@@ -26,7 +39,7 @@ body{
     border-radius: 15px 15px 0 0;
     margin: 0 auto;
     padding: 30px 30px 0 30px;
-    background-color: #3f43fd;
+    /* background-color: #3f43fd; */
     overflow: hidden;
 }
 .single_advisor_profile .advisor_thumb::after {
@@ -63,7 +76,7 @@ body{
 }
 .single_advisor_profile .advisor_thumb .social-info a:hover,
 .single_advisor_profile .advisor_thumb .social-info a:focus {
-    color: #3f43fd;
+    /* color: #3f43fd; */
 }
 .single_advisor_profile .advisor_thumb .social-info a:last-child {
     padding-right: 0;
@@ -76,7 +89,7 @@ body{
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     border-radius: 0 0 15px 15px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 .single_advisor_profile .single_advisor_details_info::after {
     -webkit-transition-duration: 500ms;
@@ -85,7 +98,7 @@ body{
     z-index: 1;
     width: 50px;
     height: 3px;
-    background-color: #3f43fd;
+    background-color: #3f43fd;  
     content: "";
     top: 12px;
     right: 30px;
@@ -113,17 +126,17 @@ body{
 }
 .single_advisor_profile:hover .advisor_thumb::after,
 .single_advisor_profile:focus .advisor_thumb::after {
-    background-color: #070a57;
+    /* background-color: #070a57; */
 }
 .single_advisor_profile:hover .advisor_thumb .social-info a,
 .single_advisor_profile:focus .advisor_thumb .social-info a {
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 .single_advisor_profile:hover .advisor_thumb .social-info a:hover,
 .single_advisor_profile:hover .advisor_thumb .social-info a:focus,
 .single_advisor_profile:focus .advisor_thumb .social-info a:hover,
 .single_advisor_profile:focus .advisor_thumb .social-info a:focus {
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 /* .single_advisor_profile:hover .single_advisor_details_info,
 .single_advisor_profile:focus .single_advisor_details_info {
@@ -131,7 +144,7 @@ body{
 } */
 .single_advisor_profile:hover .single_advisor_details_info::after,
 .single_advisor_profile:focus .single_advisor_details_info::after {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 .single_advisor_profile:hover .single_advisor_details_info h6,
 .single_advisor_profile:focus .single_advisor_details_info h6 {

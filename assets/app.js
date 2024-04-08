@@ -14,3 +14,7 @@ gsap.to(".panel", { y: 0, duration: 3, ease: "elastic" });
 
 gsap.from(".welcome", { opacity: 0, y: -100, duration: 4, ease: "elastic" });
 gsap.to(".welcome", { opacity: 1, y: 0, duration: 4, ease: "elastic" });
+
+
+
+
