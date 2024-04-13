@@ -1,19 +1,4 @@
-<!--
 
-=========================================================
-* Neumorphism UI - v1.0.0
-=========================================================
-
-* Product Page: https://themesberg.com/product/ui-kits/neumorphism-ui
-* Copyright 2020 Themesberg MIT LICENSE (https://www.themesberg.com/licensing#mit)
-
-* Coded by https://themesberg.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,30 +6,30 @@
     <meta http-equiv="Content-Type"
         content="text/html; charset=utf-8" />
     <!-- Primary Meta Tags -->
-    <title>Neumorphism UI - About us</title>
+    <title>Inviter - Profile Setup</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title"
-        content="Neumorphism UI - About us">
+        content="Inviter App">
     <meta name="author"
-        content="Themesberg">
+        content="Zasha">
 
     <link rel="canonical"
-        href="https://themesberg.com/product/ui-kits/neumorphism-ui/" />
+        href="https://#" />
 
     <!--  Social tags -->
     <meta name="keywords"
-        content="neumorphism, neumorphism ui, neomorphism, neomorphism ui, neomorphism css, neumorphism css, neumorph, neumorphic, design system, login, form, table, tables, card, cards, navbar, modal, icons, icons, map, chat, carousel, menu, datepicker, gallery, slider, date, social, dropdown, search, tab, nav, footer, date picker, forms, tabs, time, button, select, input, timeline, cart, about us, account, log in, blog, profile, portfolio, landing page, ecommerce, shop, landing, register, app, contact, one page, sign up, signup, store, bootstrap 4, bootstrap4, dashboard, bootstrap 4 dashboard, bootstrap 4 design, bootstrap 4 system, bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, themesberg, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit">
+        content="neumorphism, neumorphism ui, neomorphism, neomorphism ui, neomorphism css, neumorphism css, neumorph, neumorphic, web3, inviter telegram app, telegram app">
     <meta name="description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
+        content="Next Level Inviter App for Telegram">
 
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name"
         content="Neumorphism UI by Themesberg">
     <meta itemprop="description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
+        content="Next Level Inviter App for Telegram">
     <meta itemprop="image"
-        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg">
+        content="https://#">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card"
@@ -54,11 +39,11 @@
     <meta name="twitter:title"
         content="Neumorphism UI by Themesberg">
     <meta name="twitter:description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
+        content="Next Level Inviter App for Telegram">
     <meta name="twitter:creator"
         content="@themesberg">
     <meta name="twitter:image"
-        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg">
+        content="https://#">
 
     <!-- Open Graph data -->
     <meta property="fb:app_id"
@@ -70,9 +55,9 @@
     <meta property="og:url"
         content="https://demo.themesberg.com/neumorphism-ui/" />
     <meta property="og:image"
-        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg" />
+        content="https://#" />
     <meta property="og:description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages." />
+        content="Next Level Inviter App for Telegram" />
     <meta property="og:site_name"
         content="Themesberg" />
 
@@ -107,6 +92,12 @@
     <link type="text/css"
         href="./assets/neu/css/neumorphism.css"
         rel="stylesheet">
+    <link type="text/css"
+        href="./assets/angel.css"
+        rel="stylesheet">
+
+
+    <script src="./assets/neu/vendor/jquery/dist/jquery.min.js"></script>
 
     <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
@@ -116,11 +107,16 @@
 
 
 
+    <div class="load d-none" id="load">
+     <div class="loader"></div> 
+ </div>
+
+      
     <section class="min-vh-100 d-flex bg-primary align-items-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 col-lg-6 justify-content-center">
-                    <div class="card bg-primary shadow-soft border-light p-4">
+                    <div class="card shadow-soft border-light p-4 mybg">
                         <div class="card-header text-center pb-0">
                             <h2 class="h4">Enter Your Details</h2>
                         </div>
@@ -172,17 +168,48 @@
         </div>
     </section>
 
-    <a id="producthunt-badge"
-        href="https://www.producthunt.com/posts/neumorphism-ui?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-neumorphism-ui"
-        target="_blank"><img
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=200908&theme=dark"
-            alt="Neumorphism UI - Neumorphism inspired UI web components, sections and pages | Product Hunt Embed"
-            style="width: 250px; height: 54px;"
-            width="250px"
-            height="54px" /></a>
+    <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="h6 modal-title mb-0" id="modal-title-default">Sol Wallet Check</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Your Wallet should have atleast one confirmed transaction.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">I Got It</button>
+                    <button type="button" class="btn btn-primary text-danger ml-auto" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="h6 modal-title mb-0" id="modal-title-default">Form Check</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Please fill in all the form fields.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">I Got It</button>
+                    <button type="button" class="btn btn-primary text-danger ml-auto" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Core -->
-    <script src="./assets/neu/vendor/jquery/dist/jquery.min.js"></script>
     <script src="./assets/neu/assets/js/neumorphism.js"></script>
     <script src="./assets/neu/vendor/popper.js/dist/umd/popper.min.js"></script>
     <script src="./assets/neu/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -198,12 +225,141 @@
     <script src="./assets/neu/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
     <script src="./assets/neu/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="./assets/neu/vendor/prismjs/prism.js"></script>
-
+<!-- 
     <script async
         defer
-        src="https://buttons.github.io/buttons.js"></script>
+        src="https://buttons.github.io/buttons.js"></script> -->
 
     <!-- Neumorphism JS -->
+
+    
+    
+<script>
+
+    
+    
+//     function getdata() {    
+    
+//         $.ajax({
+//             url: 'http://localhost:3000/api/users/check',
+//             method: 'GET',
+//             dataType: 'JSON',
+//             contentType: 'application/json',
+//             data:{
+    
+//             }
+//         },
+//         success:function(response){
+//             console.log(response)
+//         },
+//         error:function(e){
+//             console.log(e)
+    
+//         })
+        
+// }
+
+// getdata()
+
+    
+    $("#form").click(function(event) {
+    // $("#load").removeClass('d-none');
+    // $("#bdy").addClass('whiteNoise');
+    // $("h1,h2,h4,p,body").css({
+    //     color: 'white'
+    //     // property2: 'value2'
+    // });
+    
+    var tw = $("#twitter").val();
+    var tg = $("#telegram").val();
+    var sol = $("#wallet").val();
+
+        if (!tw) {
+            $("#modal-form").modal('toggle')
+        }
+
+        if (!tg) {
+            $("#modal-form").modal('toggle')
+        }
+
+        if (!sol) {
+            $("#modal-form").modal('toggle')
+        }
+
+        console.log(tw + tg + sol)
+        localStorage.setItem('tg', tg)
+        localStorage.setItem('tw', tw)
+        localStorage.setItem('wallet', wallet)
+
+
+
+
+
+
+        $.ajax({
+        url: 'http://localhost:3000/api/sol', 
+        method: 'POST',
+        dataType: 'JSON',
+        contentType: 'application/x-www-form-urlencoded',
+        data:{
+            'wallet': sol
+        },
+
+        success:function(response) {
+            console.log(response)
+            if (response.success === false) {
+                $("#modal-default").modal('toggle')
+            } else {
+                $("#test").text(tg  + tw + wallet)
+                // Twitter API here
+                // window.location.href = "pro.html";
+            }
+        },
+        error:function(e){
+            console.log(e)
+            $("#modal-default").modal('toggle')
+            // window.location.href = "pro.html";
+
+        }
+    })
+
+
+
+
+    
+    // $.ajax({
+    //     url: 'http://localhost:3000/api/users', 
+    //     method: 'POST',
+    //     dataType: 'JSON',
+    //     contentType: 'application/x-www-form-urlencoded',
+    //     data:{
+    //         'telegram': tg,
+    //         'twitter': tw,
+    //         'wallet': sol
+    //     },
+
+    //     success:function(response) {
+    //         console.log(response)
+    //         $("#test").text(tg  + tw + wallet)
+    //         window.location.href = "pro.html";
+    //     },
+    //     error:function(e){
+    //         console.log(e)
+    //         window.location.href = "pro.html";
+
+    //     }
+    // })
+
+});
+
+
+
+    function firstsubmit() {
+        var frm = document.getElementById("form")
+        frm.onclick = function(){tester}
+    }
+</script>
+
 </body>
 
 </html>

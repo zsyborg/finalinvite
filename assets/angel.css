@@ -10,6 +10,13 @@ input::placeholder{
   font-style: normal;
 }
 
+.mybg{
+    background-image: url('../assets/bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 body{
     /* background-image: url('../assets/tgback.jpg'); */
     background-size: cover;
@@ -156,3 +163,60 @@ body{
 }
 
 
+.backbtn{
+    position: fixed;
+    top: 4px;
+    left: 4px;
+}
+
+
+.probtn{
+    position: fixed;
+    top: 4px;
+    right: 8px;
+}
+
+
+
+
+
+
+.load{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3d Preloader */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: #f03355;
+    -webkit-mask:repeating-linear-gradient(#000 0 10px,#0000 0 20px);
+  }
+  .loader:after {
+    -webkit-mask:repeating-linear-gradient(#0000 0 10px,#000 0 20px);
+    animation: l36 1.5s infinite;
+  }
+  @keyframes l36 {
+    0%,
+    10%  {transform: rotate(0)      translate(0)}
+    35%  {transform: rotate(0)      translate(100%)}
+    66%  {transform: rotate(180deg) translate(100%)}
+    90%,
+    100% {transform: rotate(180deg) translate(0) }
+  } 

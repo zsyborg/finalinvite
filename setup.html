@@ -202,6 +202,15 @@
         localStorage.setItem('tw', tw)
         localStorage.setItem('wallet', wallet)
 
+
+
+$.ajax({
+    url: 'http://localhost:3000/api/users/check',
+    method: 'GET',
+    dataType: 'JSON'
+})
+
+
     
     $.ajax({
         url: 'http://localhost:3000/api/users', 
