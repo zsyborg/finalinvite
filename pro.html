@@ -88,9 +88,8 @@
         href="./assets/neu/vendor/@fortawesome/fontawesome-free/css/all.min.css"
         rel="stylesheet">
 
-    <!-- Pixel CSS -->
-    <link type="text/css"
-        href="./assets/neu/css/neumorphism.css"
+        <link type="text/css"
+        href="./assets/md5/css/mdb.dark.min.css"
         rel="stylesheet">
     <link type="text/css"
         href="./assets/angel.css"
@@ -113,33 +112,31 @@
 
 
 
+ <a href="index.html" class="backbtn">
+     <i class="fa fas fa-3x fa-backward text-white-50"></i>
+ </a>
+
+
+ 
+     <a href="pro.html" class="probtn">
+         <i class="fa-user text-white-50 fa fas fa-3x "></i>
+     </a>
+ 
       
-    <section class="min-vh-100 d-flex bg-primary align-items-center">
+    <section class="min-vh-100 d-flex mybg align-items-center">
         <div class="container">
             <div class="row justify-content-center">
-                <br/>
-                
-        
-        <a href="index.html" class="backbtn">
-            <i class="fa fas fa-3x fa-backward"></i>
-        </a>
-
-
-        
-            <a href="pro.html" class="probtn">
-                <i class="fa-user fa fas fa-3x "></i>
-            </a>
         
 
-                    <div class="col-6 justify-content-center">
+                    <div class="col-12 justify-content-center">
                     <div class="profile-card mb-5">
                         <div class="card bg-primary shadow-soft border-light">
                             <!-- <div class="profile-image bg-primary shadow-inset border border-light rounded p-3 ml-3 mt-n5">
                                 <img src="../../assets/img/team/profile-picture-3.jpg" class="card-img-top rounded" alt="Bonnie Avatar">
                             </div> -->
-                            <div class="card-body">
-                                <h3 class="h5 mb-2" id="tgname">Bonnie Green</h3>
-                                <h3 class="h5 mb-2" id="twname">Bonnie Green</h3>
+                            <div class="card-body bg-dark-subtle text-center">
+                                <h3 class="h5 mb-2 text-white-50" id="tgname">Bonnie Green</h3>
+                                <h3 class="h5 mb-2 text-white-50" id="twname">Bonnie Green</h3>
                                 <!-- <ul class="list-unstyled d-none my-3">
                                     <li>
                                         <a href="#" target="_blank" aria-label="facebook social link" class="icon icon-xs icon-facebook mr-3">
@@ -169,22 +166,28 @@
                 </div>
 
 
-                <div class="col-6 text-center">
+                <div class="col-12 text-center">
                     <div class="profile-card mb-5">
                         <div class="card bg-primary shadow-soft border-light">
-                            <div class="card-body">
+                            <div class="card-body bg-dark-subtle">
                     
-                    <h4>Total Invites: 2</h4>
-                    <p class="font-weight-bold" id="twitter">Twitter Following: <i class="fas fa-1x fa-check-circle"></i></p>
-                    <p class="font-weight-bold" id="solana">Sol Checked: <i class="fas fa-1x fa-check-circle"></i></p>
+                    <h4 class="text-white-50">Total Invites: 2</h4>
+                    <p class="font-weight-bold text-white-50" id="twitter">Twitter Following: <i class="fas text-success fa-1x fa-check-circle"></i></p>
+                    <p class="font-weight-bold text-white-50" id="solana">Sol Checked: <i class="fas fa-1x text-success fa-check-circle"></i></p>
                 </div>
                 </div>
                 </div>
             </div>
 
-            <div class="d-flex flex-column">
-                <button class="btn btn-pill btn-primary mb-3" type="button">Verify Twitter Follo</button>
-                <button class="btn btn-pill btn-primary" type="button">Verify Solana Wallet</button>
+            <div class="d-flex row flex-row">
+                <div class="col-6">
+                    <button class="btn btn-pill text-white-50 mb-3 bg-dark-subtle" type="button">Verify Twitter Follow</button>
+                </div>
+                <div class="col-6">
+
+                <button class="btn btn-pill bg-dark-subtle text-white-50" type="button">Verify Solana Wallet</button>
+            </div>
+
             </div>
 
 
@@ -242,6 +245,24 @@
 // }
 // console.log(solanaWeb3)
 // getTransactions('42i6csvZXuzFzVuuke3xhYtVRs8ZrBMRAwbmmxG9Jbfv', 5)
+
+
+var settings = {
+  "url": "https://api.twitter.com/2/users/me",
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Bearer": "AAAAAAAAAAAAAAAAAAAAABCGtQEAAAAA%2FH1SGZ0uSeTqTLW5R776ibZCWdo%3D9HJbOem7OB7lvMk7ujPBzZH9JFhy5JZ98nJPiBmE1T4mzuqnPe",
+    "access_token": "Bearer AAAAAAAAAAAAAAAAAAAAABCGtQEAAAAA%2FH1SGZ0uSeTqTLW5R776ibZCWdo%3D9HJbOem7OB7lvMk7ujPBzZH9JFhy5JZ98nJPiBmE1T4mzuqnPe",
+    "Authorization": "OAuth oauth_consumer_key=\"cjYA76Kf5Ka1Fee1nY2irJoL4\",oauth_token=\"1695124202053910536-dB5Ryv8kJsJ7eTSZZTbk1tIhuxD7XC\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1713554656\",oauth_nonce=\"BmfJQXVquTg\",oauth_version=\"1.0\",oauth_signature=\"HpM3laKygfbFkQKbjkhcY79PuXk%3D\"",
+    "Cookie": "guest_id=v1%3A171343286431395859; guest_id_ads=v1%3A171343286431395859; guest_id_marketing=v1%3A171343286431395859; personalization_id=\"v1_xh0J0K5MaeFIpEFZMKXG5g==\""
+  },
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  alert(response)
+});
 
 $("#tgname").text('Telegram: ' + localStorage.getItem('tg'))
 $("#twname").text('Twitter: ' + localStorage.getItem('tw'))
