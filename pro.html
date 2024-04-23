@@ -181,7 +181,25 @@
             </div>
         </div>
     </section>
-
+    <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="h6 modal-title mb-0" id="modal-title-default">Sol Wallet Check</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="mdlbody">Your Wallet should have atleast one confirmed transaction.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">I Got It</button>
+                    <button type="button" class="btn btn-primary text-danger ml-auto" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Core -->
     <script src="./assets/neu/assets/js/neumorphism.js"></script>
@@ -219,6 +237,28 @@
 
     <script>
         $("#retweetcheck").click(function(event) {
+
+
+            var settings = {
+            "url": "https://api.twitter.com/2/tweets/1781189821333160094/retweets",
+            "method": "GET",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Authorization": "OAuth oauth_consumer_key=\"cjYA76Kf5Ka1Fee1nY2irJoL4\",oauth_token=\"1695124202053910536-dB5Ryv8kJsJ7eTSZZTbk1tIhuxD7XC\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1713909738\",oauth_nonce=\"ZHefGlreLLo\",oauth_version=\"1.0\",oauth_signature=\"RJd1yY%2BheJWwrr96ut0Z3yF3yyg%3D\"",
+                "Cookie": "guest_id=v1%3A171246219098204123; guest_id_ads=v1%3A171246219098204123; guest_id_marketing=v1%3A171246219098204123; personalization_id=\"v1_xzo+im0t+3gklY3EtKLmFA==\""
+            },
+            "data": {
+                "expansions": "author_id"
+            }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                $("#modal-default").modal('toggle')
+                $("#mdlbody").text(response)
+                alert(response)
+            });
             
         })
 
