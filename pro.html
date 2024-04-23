@@ -244,22 +244,20 @@
         method: 'GET',
         dataType: 'JSON',
         contentType: 'application/x-www-form-urlencoded',
-        data:{
-            'wallet': sol
-        },
 
         success:function(response) {
             console.log(response)
-            if (response.success === false) {
-                $("#modal-default").modal('toggle')
-                $("#mdlbody").text(response)
-                alert(response)
-            } else {
-                $("#test").text(response)
-                alert(response)
-                // Twitter API here
-                // window.location.href = "pro.html";
-            }
+            alert(response)
+            // if (response.success === false) {
+            //     $("#modal-default").modal('toggle')
+            //     $("#mdlbody").text(response)
+            //     alert(response)
+            // } else {
+            //     $("#test").text(response)
+            //     alert(response)
+            //     // Twitter API here
+            //     // window.location.href = "pro.html";
+            // }
         },
         error:function(e){
             console.log(e)
@@ -268,15 +266,14 @@
 
         }
     })
-
-})
-
+});
 
 
-        $("#tgname").text('Telegram: ' + localStorage.getItem('tg'))
-        $("#twname").text('Twitter: ' + localStorage.getItem('tw'))
-        $("#solwallet").text('Sol Wallet: ' + localStorage.getItem('wallet'))
-        console.log(localStorage.getItem('tg'))
+
+        // $("#tgname").text('Telegram: ' + localStorage.getItem('tg'))
+        // $("#twname").text('Twitter: ' + localStorage.getItem('tw'))
+        // $("#solwallet").text('Sol Wallet: ' + localStorage.getItem('wallet'))
+        // console.log(localStorage.getItem('tg'))
 
         // Init TWA
         window.Telegram.WebApp.ready();
