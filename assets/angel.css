@@ -47,6 +47,18 @@ body{
 }
 
 
+.adminpanel{
+    width: 77px;
+    height: 77px;
+    background-color: #ce9dda;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+
+
+
   .single_advisor_profile {
     position: relative;
     margin-bottom: 50px;
