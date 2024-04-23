@@ -373,7 +373,12 @@
 <script>
     // Init TWA
     Telegram.WebApp.ready();
-    console.log(Telegram.WebApp.User)
+    
+        window.Telegram.WebAppInitData();
+        window.Telegram.WebApp.showScanQrPopup()
+        console.log(window.Telegram.WebApp.WebAppInitData())
+        console.log(window.Telegram.WebApp)
+        console.log(Telegram.WebApp.User)
 </script>
 </body>
 
