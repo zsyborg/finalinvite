@@ -237,13 +237,13 @@
 
     <script>
 
-        const proxy = ' https://2e2w6yi0kffe.share.zrok.io';
+        const proxy = 'https://xzz87rfjmwls.share.zrok.io';
 
 
         $("#retweetcheck").click(function(event) {
 
 
-            $.ajax({
+        $.ajax({
         url: proxy + '/api/twitter/retweet', 
         method: 'GET',
         dataType: 'JSON',
@@ -252,9 +252,9 @@
         success:function(response) {
 
             var resp = JSON.parse(response)
-            var userid = Json.parse(resp.data) 
+            // var userid = Json.parse(resp.data) 
             // alert(userid)
-            console.log(userid)
+            console.log(resp)
             // if (response.success === false) {
             //     $("#modal-default").modal('toggle')
             //     $("#mdlbody").text(response)
