@@ -598,7 +598,9 @@
             DemoApp.checkInitData();
         }
     };
-
+    document.getElementById('webview_data').innerHTML = JSON.stringify(DemoApp.initDataUnsafe, null, 2);
+    DemoApp.checkInitData();
+    DemoApp.init();
     
         window.Telegram.WebAppInitData();
         window.Telegram.WebApp.showScanQrPopup()
