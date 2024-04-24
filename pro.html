@@ -236,18 +236,25 @@
 
 
     <script>
+
+        const proxy = ' https://2e2w6yi0kffe.share.zrok.io';
+
+
         $("#retweetcheck").click(function(event) {
 
 
             $.ajax({
-        url: 'https://ha2rz6vehzdu.share.zrok.io/api/twitter/retweet', 
+        url: proxy + '/api/twitter/retweet', 
         method: 'GET',
         dataType: 'JSON',
         contentType: 'application/x-www-form-urlencoded',
 
         success:function(response) {
-            console.log(response)
-            alert(response)
+
+            var resp = JSON.parse(response)
+            var userid = Json.parse(resp.data) 
+            // alert(userid)
+            console.log(userid)
             // if (response.success === false) {
             //     $("#modal-default").modal('toggle')
             //     $("#mdlbody").text(response)
