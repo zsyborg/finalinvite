@@ -100,17 +100,9 @@
                                             class="col-12"
                                         >
 
-
-                                            <input
-                                            type="password"
-                                            class="form-control mb-2"
-                                            name="password"
-                                            id="password"
-                                            placeholder="Enter password"
-                                        />
                                             <input
                                                 type="text"
-                                                class="form-control mb-2 d-none"
+                                                class="form-control mb-2"
                                                 name="twitter"
                                                 id="twitter"
                                                 placeholder="Enter Tweet Link to be reweeted"
@@ -121,16 +113,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="mb-3 row login">
-                                        <div class="col-sm-12 justify-content-center">
-                                            <a id="login" href="#" class="btn text-center w-100 btn-lg btn-light submit">
-                                                Login
-                                            </a>
-                                            <p id="test"></p>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-3 row sbmit d-none">
+                                    <div class="mb-3 row sbmit">
                                         <div class="col-sm-12 justify-content-center">
                                             <a id="form" href="#" class="btn text-center w-100 btn-lg btn-light submit">
                                                 Submit
@@ -193,16 +176,12 @@
 const proxy = 'https://r1t7t61u9rnn.share.zrok.io';
 
     var tw = $("#twitter").val();
-    var pass = ''
-    $("#password").change(function(event){
-        pass = $("#password").val()
-        console.log(pass)
-    })
+    
 
         $("#form").click(function(event) {
 
             $.ajax({
-                url: proxy + '/api/users', 
+                url: proxy + '/api/admin/settweet',
                 method: 'POST',
                 dataType: 'JSON',
                 contentType: 'application/x-www-form-urlencoded',
